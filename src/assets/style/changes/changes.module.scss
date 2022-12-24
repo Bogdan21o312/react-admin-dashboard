@@ -1,0 +1,29 @@
+body[data-theme='light'] {
+  // Colors ====================================================================================================
+
+  $ColorRed: red;
+  $ColorGreen: green;
+  $ColorMain: #808080;
+
+
+  // Button ====================================================================================================
+
+  $ButtonShadow: inset 20px 20px 60px #bebebe, inset -20px -20px 60px #ffffff;
+  $ButtonShadowHover: inset 0 0 0 #bebebe, inset 0 0 0 #ffffff;
+  $ButtonShadowActive: inset 20px 20px 60px #bebebe, inset -20px -20px 60px #ffffff;
+}
+
+body[data-theme='dark'] {
+  // Colors ====================================================================================================
+
+  $ColorRed: red;
+  $ColorGreen: green;
+  $ColorMain: #808080;
+
+
+  // Button ====================================================================================================
+
+  $ButtonShadow: inset 20px 20px 60px rgba(255,255,255,0.05), inset -20px -20px 60px rgba(0,0,0,0.5);
+  $ButtonShadowHover: inset 0 0 0 #bebebe, inset 0 0 0 rgba(0,0,0,0.5);
+  $ButtonShadowActive: inset 20px 20px 60px rgba(255,255,255,0.05), inset -20px -20px 60px rgba(0,0,0,0.5);
+}
