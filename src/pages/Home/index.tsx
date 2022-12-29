@@ -18,14 +18,6 @@ const Index = () => {
                     {test.body}
                 </div>
             )}
-            <Button as={"button"} secondary={true} onClick={() => toggleTheme}>
-                {theme === 'light' ? (
-                    <div>light</div>
-                ) : (
-                    <div>dark</div>
-                )}{' '}
-                <span>Theme</span>
-            </Button>
         </Layout>
     );
 };
