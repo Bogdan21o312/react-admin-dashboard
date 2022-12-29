@@ -1,5 +1,5 @@
 import React, {FC, ReactNode} from 'react';
-import Wrapper from "../Wrapper";
+import Wrapper from "../../@UI/Wrapper";
 import Header from "../Header";
 import Main from "../Main";
 import Footer from "../Footer";
