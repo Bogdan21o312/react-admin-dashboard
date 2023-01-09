@@ -1,20 +1,38 @@
-import React from 'react';
-import {Navigate, Route, Routes} from "react-router-dom";
-import Home from "../pages/Home";
-import Error from "../pages/Error";
-import {ERROR_URL, HOME_URL} from "./config";
+import React, {useContext, useEffect} from 'react';
+import {Route, Routes, useNavigate} from "react-router-dom";
+import {privateRoutes, publicRoutes} from "./routes";
+import {useAuthState} from "react-firebase-hooks/auth";
+import {Context} from "../index";
+import {useAuth} from "../hooks/useAuth";
 
 const AppRouter = () => {
-    return (
-        <Routes>
-            <Route path={HOME_URL} element={<Home/>}/>
-            <Route path={ERROR_URL} element={<Error/>}/>
-            <Route
-                path="*"
-                element={<Navigate to={ERROR_URL} replace/>}
-            />
-        </Routes>
-    );
+    const navigate = useNavigate()
+    const {isAuth, email} = useAuth();
+    const {auth} = useContext(Context)
+    const [user] = useAuthState(auth)
+    useEffect(() => {
+        if (user) {
+            navigate("/");
+        } else {
+            navigate("/login");
+        }
+    }, [user])
+    return user ?
+        (
+            <Routes>
+                {privateRoutes.map(({path, Component}) =>
+                    <Route key={path} path={path} element={<Component/>}/>
+                )}
+            </Routes>
+        )
+        :
+        (
+            <Routes>
+                {publicRoutes.map(({path, Component}) =>
+                    <Route key={path} path={path} element={<Component/>}/>
+                )}
+            </Routes>
+        )
 };
 
 export default AppRouter;
