@@ -1,13 +1,15 @@
 import {ComponentProps, ElementType, ReactNode} from "react";
 
-type ITextDarkProps = {
+type ITextDarkProps<E extends ElementType = ElementType> = {
     dark?: boolean
     secondary?: never
+    as?: E;
 };
 
-type ITextSecondaryProps = {
+type ITextSecondaryProps<E extends ElementType = ElementType> = {
     dark?: never
     secondary?: boolean
+    as?: E;
 };
 
 type ITextOwnProps<E extends ElementType = ElementType> = ITextDarkProps | ITextSecondaryProps & {
@@ -16,6 +18,6 @@ type ITextOwnProps<E extends ElementType = ElementType> = ITextDarkProps | IText
 };
 
 
-export const defaultElementText = "div";
+// export const defaultElementText = "div";
 export type ITextProps<E extends ElementType> = ITextOwnProps<E>  &
     Omit<ComponentProps<E>, keyof ITextOwnProps>;
