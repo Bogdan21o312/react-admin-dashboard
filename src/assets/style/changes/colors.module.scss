@@ -1,0 +1,18 @@
+// Colors ====================================================================================================
+
+$ColorRed: var(--color-red);
+$ColorGreen: var(--color-green);
+$ColorMain: var(--color-main);
+$ColorWhite: var(--color-white);
+$ColorDark: var(--color-dark);
+$ColorPurple: var(--color-purple);
+
+$ColorPolymorphismPrimary: var(--color-polymorphism-primary);
+$ColorPolymorphismSecondary: var(--color-polymorphism-secondary);
+
+
+// Shadow ====================================================================================================
+
+$ButtonShadow: inset 20px 20px 60px #bebebe, inset -20px -20px 60px #ffffff;
+$ButtonShadowHover: inset 0 0 0 #bebebe, inset 0 0 0 #ffffff;
+$ButtonShadowActive: inset 20px 20px 60px #bebebe, inset -20px -20px 60px #ffffff;
