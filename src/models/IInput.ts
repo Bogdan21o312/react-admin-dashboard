@@ -1,23 +1,23 @@
-type CommonInputProps = {
+type CommonIInputProps = {
 
 }
 
-type EmailInputProps = CommonInputProps & {
+type EmailIInputProps = CommonIInputProps & {
     login?: boolean
     password?: never
     tel?: never
 }
 
-type PasswordInputProps = CommonInputProps & {
+type PasswordIInputProps = CommonIInputProps & {
     login?: never
     password?: boolean
     tel?: never
 }
 
-type TelInputProps = CommonInputProps & {
+type TelIInputProps = CommonIInputProps & {
     login?: never
     password?: never
     tel?: boolean
 }
 
-export type InputProps = EmailInputProps | PasswordInputProps | TelInputProps
+export type IInputProps = EmailIInputProps | PasswordIInputProps | TelIInputProps
