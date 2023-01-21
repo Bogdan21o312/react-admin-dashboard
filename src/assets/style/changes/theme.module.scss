@@ -1,12 +1,21 @@
+
 body[data-theme='light'] {
   // Colors ====================================================================================================
 
-  $ColorRed: red;
-  $ColorGreen: green;
-  $ColorMain: #808080;
+  --color-red: red;
+  --color-green: green;
+  --color-main: #181818;
+  --color-white: #f9f9f9;
+  --color-dark: #a0a5a8;
+  --color-purple: #4B70E2;
+
+  --color-background: #ECF0F3;
+
+  --color-polymorphism-primary: #ecf0f3;
+  --color-polymorphism-secondary: #d1d9e6;
 
 
-  // Button ====================================================================================================
+  // Index ====================================================================================================
 
   $ButtonShadow: inset 20px 20px 60px #bebebe, inset -20px -20px 60px #ffffff;
   $ButtonShadowHover: inset 0 0 0 #bebebe, inset 0 0 0 #ffffff;
@@ -16,12 +25,20 @@ body[data-theme='light'] {
 body[data-theme='dark'] {
   // Colors ====================================================================================================
 
-  $ColorRed: red;
-  $ColorGreen: green;
-  $ColorMain: #808080;
+  --color-red: red;
+  --color-green: green;
+  --color-main: #fff;
+  --color-white: #f9f9f9;
+  --color-dark: #a0a5a8;
+  --color-purple: #4B70E2;
+
+  --color-background: #202128;
+
+  --color-polymorphism-primary: #ecf0f3;
+  --color-polymorphism-secondary: #d1d9e6;
 
 
-  // Button ====================================================================================================
+  // Index ====================================================================================================
 
   $ButtonShadow: inset 20px 20px 60px rgba(255,255,255,0.05), inset -20px -20px 60px rgba(0,0,0,0.5);
   $ButtonShadowHover: inset 0 0 0 #bebebe, inset 0 0 0 rgba(0,0,0,0.5);
