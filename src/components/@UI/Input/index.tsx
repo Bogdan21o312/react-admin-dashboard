@@ -1,9 +1,10 @@
 import React, {FC, ReactNode, useState} from 'react';
 import classes from "./Input.module.scss"
-import {InputProps} from "../../../models/IInput";
+import {IInputProps} from "../../../models/IInput";
 
-const Index:FC<InputProps> = ({login, password, tel}) => {
+const Index:FC<IInputProps> = ({login, password, tel, ...otherProps}) => {
     let typeValue = 'text'
+    let classesName = classes.input
     if (login) {
         typeValue = 'email'
     }
@@ -13,7 +14,7 @@ const Index:FC<InputProps> = ({login, password, tel}) => {
     if (tel) {
         typeValue = 'tel'
     }
-    return <input type={typeValue}/>
+    return <input className={classesName} type={typeValue} {...otherProps}/>
 };
 
 export default Index;
