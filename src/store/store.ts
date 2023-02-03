@@ -1,10 +1,12 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
 import {testAPI} from "../sevices/test";
 import {themeReducer} from "./slices/themeSlice";
+import userReducer from "./slices/userSlice"
 
 const rootReducer = combineReducers({
     [testAPI.reducerPath]: testAPI.reducer,
     theme: themeReducer,
+    user: userReducer,
 })
 
 export const setupStore = () => {
