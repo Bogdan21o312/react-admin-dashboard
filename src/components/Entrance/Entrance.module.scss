@@ -1,0 +1,158 @@
+@import "src/assets/style/Style.module";
+
+.body {
+  position: relative;
+  width: 1000px;
+  min-width: 1000px;
+  min-height: 600px;
+  height: 600px;
+  padding: 25px;
+  background-color: $ColorPolymorphismPrimary;
+  box-shadow: 10px 10px 10px $ColorPolymorphismSecondary,
+  -10px -10px 10px $ColorWhite;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+// Main ====================================================================================================
+
+.main {
+  position: absolute;
+  max-width: rem(600);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  right: calc(100% - 600px);
+  &.sw {
+    right: 0;
+  }
+  &Content {
+    margin: 0 auto;
+    max-width: rem(350);
+  }
+
+  &BlockText {
+    line-height: 3;
+  }
+}
+
+.sws {
+  left: 0;
+}
+
+// Animated
+
+.mainEnterActive {
+  animation-name: b;
+  animation-duration: 1.25s;
+}
+
+.mainEnterDone {
+
+}
+
+.mainExit {
+  animation-name: a;
+  animation-duration: 1.25s;
+}
+
+.mainExitActive {
+}
+
+// Switch ====================================================================================================
+
+.switch {
+
+  h2 {
+    margin-bottom: rem(30);
+  }
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 400px;
+  padding: 50px;
+  z-index: 5;
+  transition: 1.25s;
+  background-color: $ColorPolymorphismPrimary;
+  box-shadow: 4px 4px 10px $ColorPolymorphismSecondary,
+  -4px -4px 10px $ColorWhite;
+  bottom: -60%;
+
+  &Content {
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background-color: $ColorPolymorphismPrimary;
+    box-shadow: inset 8px 8px 12px $ColorPolymorphismSecondary,
+    inset -8px -8px 12px $ColorWhite;
+
+  }
+
+  &::after {
+    top: -30%;
+    left: 0;
+    width: 300px;
+    height: 300px;
+  }
+
+  &::before {
+    width: 500px;
+    height: 500px;
+    bottom: -60%;
+    left: 0;
+  }
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
+// Keyframes ====================================================================================================
+
+@keyframes __bounceInDown {
+  0% {
+  }
+
+  100% {
+  }
+}
+
+@keyframes a {
+  0% {
+    left: calc(0% - 600px);
+  }
+
+  100% {
+    left: calc(100% - 600px);
+  }
+}
+
+@keyframes b {
+  0% {
+    right: calc(0% - 600px);
+  }
+
+  100% {
+    right: calc(100% - 600px);
+  }
+}
+
+@keyframes is-gx {
+  0% {
+  }
+
+  100% {
+
+  }
+}
