@@ -21,7 +21,7 @@ const EntranceAnimated: FC<EntranceAnimatedProps> = ({state, children}) => {
                     exitDone: classes.mainExitActive
                 }}
             >
-                <div className={classes.mainEnter}>
+                <div className={classes.main}>
                     {children}
                 </div>
             </CSSTransition>
