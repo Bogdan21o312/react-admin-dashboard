@@ -11,7 +11,6 @@ const Index = <E extends ElementType = typeof defaultElementText>({as, title, te
     const classesText = classes.text
     const classesLink = classes.link
     const classesCenter = classes.center
-
     if (title) {
         classesName.push(classesTitle)
     }
